@@ -20,15 +20,6 @@ process.on("uncaughtException", (err) => {
 
 config({ path: path.join(projPath, ".env") });
 
-const server = new McpServerWithMiddleware({
-	name: "integration-suite",
-	version: "1.0.0",
-	capabilities: {
-		resources: {},
-		tools: {},
-	},
-});
-
 registerAllHandlers(server);
 
 async function main() {
