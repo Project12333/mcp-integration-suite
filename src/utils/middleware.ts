@@ -99,6 +99,12 @@ export class McpServerWithMiddleware extends McpServer {
 			return handler(args, extra);
 		};
 
-		return this.tool(name, description, params, wrappedHandler);
+		return this.tool(
+  name,
+  description,
+  params as any,
+  wrappedHandler as any
+);
+
 	}
 }
